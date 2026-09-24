@@ -1,12 +1,14 @@
 pipeline {
     agent any
 
-    stages {
+    environment {
+        PATH = "C:\\Program Files\\Java\\jdk-21.0.12\\bin;${env.PATH}"
+    }
 
+    stages {
         stage('Checkout') {
             steps {
-                git  branch: 'main',
-                url:'https://github.com/aakashpatel96103/Practical2.git'
+                git branch: 'main', url: 'https://github.com/aakashpatel96103/Practical2.git'
             }
         }
 
