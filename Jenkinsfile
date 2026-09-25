@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo 'Cloning repository'
-                git 'https://github.com/username/CalculatorApp.git'
+                git branch: 'main', url: 'https://github.com/aakashpatel96103/Practical2.git'
             }
         }
  
